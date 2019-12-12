@@ -35,6 +35,10 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import MathType from '@wiris/mathtype-ckeditor5/src/plugin';
+import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
+import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount';
+
 
 export default class DecoupledEditor extends DecoupledEditorBase {}
 
@@ -68,7 +72,10 @@ DecoupledEditor.builtinPlugins = [
 	Paragraph,
 	PasteFromOffice,
 	Table,
-	TableToolbar
+	TableToolbar,
+	MathType,
+	Base64UploadAdapter,
+	WordCount
 ];
 
 // Editor configuration.
@@ -76,32 +83,26 @@ DecoupledEditor.defaultConfig = {
 	toolbar: {
 		items: [
 			'heading',
-			'|',
 			'fontsize',
 			'fontfamily',
-			'|',
 			'bold',
 			'italic',
 			'underline',
+			'|',
 			'strikethrough',
 			'highlight',
-			'|',
 			'alignment',
-			'|',
 			'numberedList',
 			'bulletedList',
 			'|',
 			'indent',
 			'outdent',
-			'|',
-			'link',
 			'blockquote',
-			'imageUpload',
 			'insertTable',
-			'mediaEmbed',
-			'|',
 			'undo',
-			'redo'
+			'redo',
+			'MathType',
+            'ChemType',
 		]
 	},
 	image: {
