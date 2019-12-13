@@ -83,12 +83,13 @@ DecoupledEditor.defaultConfig = {
 	toolbar: {
 		items: [
 			'heading',
-			'fontsize',
-			'fontfamily',
 			'bold',
 			'italic',
 			'underline',
-			'|',
+			'fontsize',
+			'fontfamily',
+			'MathType',
+            'ChemType',
 			'strikethrough',
 			'highlight',
 			'alignment',
@@ -101,8 +102,6 @@ DecoupledEditor.defaultConfig = {
 			'insertTable',
 			'undo',
 			'redo',
-			'MathType',
-            'ChemType',
 		]
 	},
 	image: {
